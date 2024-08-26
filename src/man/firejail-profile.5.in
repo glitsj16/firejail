@@ -867,20 +867,6 @@ net eth0
 ip 10.10.20.56
 
 .TP
-\fBip none
-No IP address and no default gateway are configured for the last interface
-defined by a net command. Use this option
-in case you intend to start an external DHCP client in the sandbox.
-.br
-
-.br
-Example:
-.br
-net eth0
-.br
-ip none
-
-.TP
 \fBip dhcp
 Acquire an IP address and default gateway for the last interface defined by a
 net command, as well as set the DNS servers according to the DHCP response.
@@ -906,6 +892,20 @@ The DHCP client will NOT release the DHCP lease when the sandbox terminates.
 If your DHCP server requires leases to be explicitly released, consider running
 a DHCP client and releasing the lease manually in conjunction with the
 net none command.
+
+.TP
+\fBip none
+No IP address and no default gateway are configured for the last interface
+defined by a net command. Use this option
+in case you intend to start an external DHCP client in the sandbox.
+.br
+
+.br
+Example:
+.br
+net eth0
+.br
+ip none
 
 .TP
 \fBip6 address
